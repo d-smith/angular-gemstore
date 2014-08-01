@@ -1,0 +1,4 @@
+Directives
+Modules
+Expressions - insert dynamic values into the html
+Controllers - help to get data onto the page
