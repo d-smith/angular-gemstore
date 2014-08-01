@@ -1,4 +1,11 @@
-Directives
-Modules
-Expressions - insert dynamic values into the html
-Controllers - help to get data onto the page
+Directives - HTML annotations that trigger javascript behaviors
+Modules - where our application components live
+Expressions - how values get displayed on a page
+Controllers - where we add application behavior
+
+Wrap our javascript app in a closure - good habit.
+
+More directives
+~ ng-show
+~ ng-hide
+~ ng-repeat
