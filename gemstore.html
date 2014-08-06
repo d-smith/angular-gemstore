@@ -7,11 +7,13 @@
 		<script type="text/javascript" src="./bower_components/angularjs/angular.min.js"></script>
 		<script type="text/javascript" src="./app.js"></script>
 
-			<div ng-repeat="product in store.products">
-				<h1> {{product.name}} </h1>
-				<h2> {{product.price}} </h2>
-				<p> {{product.description}} </p>
-				<button ng-show="product.canPurchase"> Add to Cart </button>
-			</div>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="product in store.products">
+					<h3>
+						{{product.name}}
+						<em class="pull-right">{{product.price}}</em>
+					</h3>
+				</li>
+			</ul>
 	</body>
 </html>
