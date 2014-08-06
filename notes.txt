@@ -6,6 +6,18 @@ Controllers - where we add application behavior
 Wrap our javascript app in a closure - good habit.
 
 More directives
+~ ng-app
+~ ng-controller
 ~ ng-show
 ~ ng-hide
 ~ ng-repeat
+
+Pipe | take the output of an expression and pipe it into the filter
+
+Recipe: {{ data | filter:options}}
+
+Filters: date, lowercase, uppercase, limitTo, orderBy
+
+ng-src directive - example: <img ng-src="{{product.images[0]}.full}}" - if we had
+just used src, the browser would have tried to load the image before the expression
+was evaluated.
