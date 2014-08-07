@@ -21,3 +21,18 @@ Filters: date, lowercase, uppercase, limitTo, orderBy
 ng-src directive - example: <img ng-src="{{product.images[0]}.full}}" - if we had
 just used src, the browser would have tried to load the image before the expression
 was evaluated.
+
+ng-click directive - used with tabs, takes an expression to evaluate, e.g.
+ng-click="tab = 1"
+
+<section>
+  <ul class="nav nav-pills">
+    <li><a href ng-click="tab = 1">Description</a></li>
+    <li><a href ng-click="tab = 2">Specifications</a></li>
+    <li><a href ng-click="tab = 3">Reviews</a></li
+  </ul>
+  {{tab}}
+
+When ng-click changes the value of tab, the {{tab}} expression automatically
+gets updated
+==> This is two-way data binding
