@@ -36,3 +36,12 @@ ng-click="tab = 1"
 When ng-click changes the value of tab, the {{tab}} expression automatically
 gets updated
 ==> This is two-way data binding
+
+Expressions are re-evaluated when properties change.
+
+ng-init - Evaluate an expression in the current scope
+
+ng-class="{active:tab === 1}"
+{ name of class to set: expression to evaluate}
+
+expression true - append class to element
