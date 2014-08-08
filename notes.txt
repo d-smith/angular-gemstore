@@ -45,3 +45,7 @@ ng-class="{active:tab === 1}"
 { name of class to set: expression to evaluate}
 
 expression true - append class to element
+
+ng-model - bind form element value to the property
+
+~ Can used with checkboxes and radio buttons

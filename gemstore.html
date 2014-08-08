@@ -28,13 +28,40 @@
         <div class="panel" ng-show="panels.isCurrent(3)">
           <h4> Reviews </h4>
 
-          <div ng-init="discussion.reviews = product.reviews">
+          <div>
             <blockquote class="review" ng-repeat="review in product.reviews">
               {{review.body}}
               <cite>by: {{review.author}}</cite>
             </blockquote>
 
-						
+						<form name="reviewForm" class="form-horizontal">
+							<blockquote>
+								<b>Stars: {{review.stars}}</b>
+								{{review.body}}
+								<cite>by: {{review.author}}</cite>
+							</blockquote>
+							<h4>Submit a Review</h4>
+							<fieldset class="form-group">
+								<select class="form-control" ng-model="review.stars" title="Stars">
+									<option value="1">1 star</option>
+									<option value="2">2 star</option>
+									<option value="3">3 star</option>
+									<option value="4">4 star</option>
+									<option value="5">5 star</option>
+								</select>
+							</fieldset>
+							<fieldset class="form-group">
+								<textarea class="form-control" placeholder="Write a short review of the product..."
+									title="Review" ng-model="review.body"></textarea>
+							</fieldset>
+							<fieldset class="form-group">
+								<input type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email"
+									ng-model="review.author"/>
+							</fieldset>
+							<fieldset class="form-group">
+								<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+							</fieldset>
+						</form>
 
           </div>
         </div>
