@@ -34,32 +34,33 @@
               <cite>by: {{review.author}}</cite>
             </blockquote>
 
-						<form name="reviewForm" class="form-horizontal">
+						<form name="reviewForm" class="form-horizontal"
+							ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
 							<blockquote>
-								<b>Stars: {{review.stars}}</b>
-								{{review.body}}
-								<cite>by: {{review.author}}</cite>
+								<b>Stars: {{reviewCtrl.review.stars}}</b>
+								{{reviewCtrl.review.body}}
+								<cite>by: {{reviewCtrl.review.author}}</cite>
 							</blockquote>
 							<h4>Submit a Review</h4>
 							<fieldset class="form-group">
-								<select class="form-control" ng-model="review.stars" title="Stars">
+								<select class="form-control" ng-model="reviewCtrl.review.stars" title="Stars">
 									<option value="1">1 star</option>
-									<option value="2">2 star</option>
-									<option value="3">3 star</option>
-									<option value="4">4 star</option>
-									<option value="5">5 star</option>
+									<option value="2">2 stars</option>
+									<option value="3">3 stars</option>
+									<option value="4">4 stars</option>
+									<option value="5">5 stars</option>
 								</select>
 							</fieldset>
 							<fieldset class="form-group">
 								<textarea class="form-control" placeholder="Write a short review of the product..."
-									title="Review" ng-model="review.body"></textarea>
+									title="Review" ng-model="reviewCtrl.review.body"></textarea>
 							</fieldset>
 							<fieldset class="form-group">
-								<input type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email"
-									ng-model="review.author"/>
+								<input type="email" class="form-control" placeholder="flibby@foo.org" title="Email"
+									ng-model="reviewCtrl.review.author"/>
 							</fieldset>
 							<fieldset class="form-group">
-								<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+								<input type="submit" class="btn btn-primary pull-right"  value="Submit Review" />
 							</fieldset>
 						</form>
 

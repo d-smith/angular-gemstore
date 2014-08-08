@@ -49,3 +49,7 @@ expression true - append class to element
 ng-model - bind form element value to the property
 
 ~ Can used with checkboxes and radio buttons
+
+ng-submit - call a function when a form is submitted.
+
+Next: Start with validations.
