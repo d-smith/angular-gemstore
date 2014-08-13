@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title> AngularJS Example Store </title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./style.css"
 </head>
 <body class="container">
   <ul class="products list-unstyled" ng-controller="StoreController as store">
@@ -35,7 +36,7 @@
             </blockquote>
 
 						<form name="reviewForm" class="form-horizontal"
-							ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+							ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
 							<blockquote>
 								<b>Stars: {{reviewCtrl.review.stars}}</b>
 								{{reviewCtrl.review.body}}
@@ -43,7 +44,7 @@
 							</blockquote>
 							<h4>Submit a Review</h4>
 							<fieldset class="form-group">
-								<select class="form-control" ng-model="reviewCtrl.review.stars" title="Stars">
+								<select class="form-control" ng-model="reviewCtrl.review.stars" title="Stars" required>
 									<option value="1">1 star</option>
 									<option value="2">2 stars</option>
 									<option value="3">3 stars</option>
@@ -53,12 +54,13 @@
 							</fieldset>
 							<fieldset class="form-group">
 								<textarea class="form-control" placeholder="Write a short review of the product..."
-									title="Review" ng-model="reviewCtrl.review.body"></textarea>
+									title="Review" ng-model="reviewCtrl.review.body" required></textarea>
 							</fieldset>
 							<fieldset class="form-group">
 								<input type="email" class="form-control" placeholder="flibby@foo.org" title="Email"
-									ng-model="reviewCtrl.review.author"/>
+									ng-model="reviewCtrl.review.author" required/>
 							</fieldset>
+							<div>reviewForm is {{reviewForm.$valid}} </div>
 							<fieldset class="form-group">
 								<input type="submit" class="btn btn-primary pull-right"  value="Submit Review" />
 							</fieldset>
@@ -69,7 +71,7 @@
       </section> <!-- class="panels" -->
     </li>
   </ul> <!-- class="products" -->
-  <script type="text/javascript" src="./bower_components/angularjs/angular.min.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="./app.js"></script>
 </body>
 </html>

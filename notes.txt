@@ -52,4 +52,16 @@ ng-model - bind form element value to the property
 
 ng-submit - call a function when a form is submitted.
 
-Next: Start with validations.
+Validations
+
+* Turn off default html validations using novalidate in the form tag
+* Mark required fields
+* Debug code <div>reviewForm is {{reviewForm.$valid}} </div>, valid is a built in property.
+* Use the build in property to prevent submitting an invalid form
+
+ng-input classes
+* ng-pristine, ng-dirty, ng-invalid, ng-valid
+
+Angular can also validate urls and numbers (numbers can have a min and max)
+
+Next: start with custom directives
