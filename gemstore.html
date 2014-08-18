@@ -7,9 +7,11 @@
   <link rel="stylesheet" type="text/css" href="./style.css"
 </head>
 <body class="container">
+
+
   <ul class="products list-unstyled" ng-controller="StoreController as store">
     <li ng-repeat="product in store.products">
-      <h3> {{product.name}} <em class="pull-right">{{product.price | currency}}</em> </h3>
+      <h3><product-title></product-title></h3>
 
 
 

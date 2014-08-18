@@ -64,4 +64,24 @@ ng-input classes
 
 Angular can also validate urls and numbers (numbers can have a min and max)
 
-Next: start with custom directives
+Custom Directives
+
+How do we eliminate duplicate code? Pull out html snippets into a separate
+html file, then ng-include the file (file name between singlequotes).
+
+But.. directives go farther than this.
+
+Directives allow you to write HTML that expresses the behavior of your app.
+~ template expanding directives
+~ can also express complex UIs, calling events and registering event handlers,
+reusing common components.
+
+Element directives - don't use self closing tag as some browsers do not like
+them for custom elements.
+
+Common convention is to use element directives for ui widgets, and attribute
+directives for mixing in behavior.
+
+Use restrict: 'A' for attribute directives
+
+Start with: Directive Controllers
