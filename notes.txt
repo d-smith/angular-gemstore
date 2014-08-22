@@ -86,3 +86,20 @@ Use restrict: 'A' for attribute directives
 
 Creating a directive with a controller - look at this commit to
 see the refactoring: https://github.com/d-smith/angular-gemstore/commit/78cade91aa2a59373099fa03da6a8c47d5db36a7
+
+Modules - see commit e8a49b332b09d172f5ea8df738a02ad916535d85
+
+Services
+$http for calling http services
+$log for logging to the console
+$filter - array filtering
+
+
+Dependency injection for services:
+
+app.controller('SomeController', ['$http', $log, function($http,$log)]) {
+
+});
+
+Built in services are registered with the injector, controller expresses required
+dependency, injector supplies (or injects) the services
