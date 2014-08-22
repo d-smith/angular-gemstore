@@ -84,4 +84,5 @@ directives for mixing in behavior.
 
 Use restrict: 'A' for attribute directives
 
-Start with: Directive Controllers
+Creating a directive with a controller - look at this commit to
+see the refactoring: https://github.com/d-smith/angular-gemstore/commit/78cade91aa2a59373099fa03da6a8c47d5db36a7
